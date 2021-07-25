@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "plugins": [{
+      "name": "@vuedx/typescript-plugin-vue",
+    }],
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
