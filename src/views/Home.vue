@@ -1,14 +1,19 @@
 <template>
-  <h1>The base view</h1>
+  <div>
+    <h1>The base view</h1>
+    <img alt="Vue logo" src="@/assets/logo.png" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import HelloWorld from '@/components/HelloWorld.vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
-    //
+    HelloWorld,
   },
   props: {
     //
