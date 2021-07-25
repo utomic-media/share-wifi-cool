@@ -1,4 +1,5 @@
 <template>
+  <LocaleSelection />
   <router-view />
   <TheFooter />
 </template>
@@ -6,11 +7,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TheFooter from '@/components/base/TheFooter.vue';
+import LocaleSelection from '@/components/LocaleSelection/Index.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     TheFooter,
+    LocaleSelection,
   },
 });
 </script>
