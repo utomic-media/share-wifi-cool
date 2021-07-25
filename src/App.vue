@@ -1,15 +1,16 @@
 <template>
-  
   <router-view />
+  <TheFooter />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import TheFooter from '@/components/base/TheFooter.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    //
+    TheFooter,
   },
 });
 </script>
