@@ -1,20 +1,20 @@
 <template>
   <div>
-    <h1>{{ $t("message.hello") }}</h1>
-    <h1>The base view</h1>
-    <img alt="Vue logo" src="@/assets/logo.png" />
-    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+    
+    
+    <WiFiCard />
+
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue';
+import WiFiCard from '@/components/WiFiCard.vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
-    HelloWorld,
+    WiFiCard,
   },
   props: {
     //

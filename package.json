@@ -8,6 +8,7 @@
     "lint": "eslint . --ext .ts --ext .vue "
   },
   "dependencies": {
+    "qrcode.vue": "^3.2.2",
     "vue": "^3.0.5",
     "vue-i18n": "^9.1.7",
     "vue-router": "^4.0.10"
