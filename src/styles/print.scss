@@ -1,0 +1,53 @@
+/**
+ * TODO: use tailwind-classes to generate print css
+ * right now we override with the same values as the tailwind classes would use manually,
+ * because : @apply <classname>#{!important};
+ * (what would be the correct tailwind-sass command) runs insanely slow in dev mode
+ */
+@media print {
+  body {
+    visibility: hidden;
+  }
+
+  .print-visible {
+    visibility: visible;
+  }
+
+  .print-hidden {
+    display: none;
+  }
+
+  .v-radio-options>div {
+    &:not(.selected) {
+      display: none;
+    }
+
+    &.selected {
+      input {
+        display: none;
+      }
+
+      label {
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+        padding-left: 0.75rem !important;
+      }
+    }
+  }
+
+  input {
+    border: 0 !important;
+    border-radius: 0 !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .v-input {
+    margin-bottom: 0.75rem !important;
+  }
+
+  // .wifi-card {
+    // box-shadow: none !important;
+    // border: 1px black solid !important;
+  // }
+}

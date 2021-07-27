@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="v-accordion">
     <template
       v-for="(object, index) in content"
       :key="index"
@@ -7,7 +7,12 @@
       <div class="my-3 border rounded-md">
         <h3
           @click="setActive(index)"
-          class="p-3 bg-green-50 hover:bg-gray-200"
+          class="p-3 italic"
+          :class="
+            (active === index)
+              ? 'bg-green-50 hover:bg-gray-200'
+              : 'bg-gray-200 hover:bg-green-50'
+          "
         >
           {{ object.key }}
         </h3>
@@ -15,9 +20,17 @@
         <!-- TODO: create opening transition -->
         <div
           v-show="index === active"
-          class="p-3"
+          class="p-3 text-sm"
         >
           {{ object.value }}
+          <v-button
+            v-if="object.link"
+            :to="object.link.target"
+            :hrefLink="object.link.target"
+            textStyle
+          >
+            {{ object.link.text }}
+          </v-button>
         </div>
       </div>
     </template>
@@ -26,17 +39,24 @@
 
 <script lang="ts">
 import { defineComponent, PropType, ref } from 'vue';
+import VButton from './v-Button.vue';
+
+interface Link {
+  target: string,
+  text: string,
+}
 
 interface AccordionContent {
   key: string | number,
   value: string | number,
-  link?: string,
+  link?: Link,
   linkText?: string,
 }
 
 export default defineComponent({
   name: 'v-Accodion',
   components: {
+    VButton,
     //
   },
   props: {

@@ -1,25 +1,27 @@
 <template>
-  <div class="flex flex-col mb-3">
+  <div class="v-radio flex flex-col mb-3">
 
     <label v-if="label">
       {{ label }}
     </label>
 
-    <div class="flex" :class="[row ? 'flex-row' : 'flex-col']">
-      <div
+    <div class="flex v-radio-options" :class="[row ? 'flex-row' : 'flex-col']">
+      <template
         v-for="option in options"
         :key="option.key"
       >
-        <input
-          type="radio"
-          class="mr-1"
-          :id="option.key"
-          :value="option.value"
-          :checked="option.value === modelValue"
-          @change="updateSelection"
-        />
-        <label :for="option.key" class="mr-3">{{ option.label }}</label>
-      </div>
+        <div :class="[option.value === modelValue ? 'selected' : '']">
+          <input
+            type="radio"
+            class="mr-1"
+            :id="option.key"
+            :value="option.value"
+            :checked="option.value === modelValue"
+            @change="updateSelection"
+          />
+          <label :for="option.key" class="mr-3 text-gray-700">{{ option.label }}</label>
+        </div>
+      </template>
     </div>
   </div>
 </template>

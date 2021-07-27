@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col mb-3">
+  <div class="v-input flex flex-col mb-3">
     <label
       v-show="label && showLabel"
       :for="id"
@@ -12,6 +12,7 @@
       :id="id"
       :name="id"
       :placeholder="placeholder"
+      autocomplete="off"
       class="border rounded-md p-3 placeholder-gray-500 text-gray-700"
     />
   </div>

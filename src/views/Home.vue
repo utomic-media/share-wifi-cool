@@ -32,10 +32,7 @@ export default defineComponent({
     //
   },
   setup() {
-    // console.log(i18n);
-    const test = '';
-
-    return { test };
+    //
   },
 });
 </script>
