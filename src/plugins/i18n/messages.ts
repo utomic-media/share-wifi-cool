@@ -17,6 +17,13 @@ const messages = {
       description: '📱📷 Scan the qr code with your phone camera to connect automatically',
       hiddenNetwork: 'Hidden network',
     },
+    theFooter: {
+      text: 'Developed and designed with 💚 by',
+      legal: {
+        legal: 'Legal',
+        privacyPolicy: 'Privacy policy',
+      },
+    },
     pages: {
       home: {
         title: '📡 📶 Share Wifi - The cool way 🚀',

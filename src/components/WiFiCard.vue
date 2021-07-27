@@ -4,7 +4,7 @@
 
     <div class="flex flex-row">
       <QrcodeVue :value="qrValue" />
-      <div class="flex flex-col ml-10">
+      <div class="flex flex-col ml-10 flex-1">
         <v-input
           v-model="wifiSSID"
           id="wifi-ssid"

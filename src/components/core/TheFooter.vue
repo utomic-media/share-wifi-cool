@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row py-3 px-5 justify-between">
     <div>
-      Developed and designed by
+      {{ $t("theFooter.text") }}
       <a href="utomic.media" target="blank" rel="noopener" >Utomic Media</a>
     </div>
     
@@ -10,13 +10,13 @@
         :to="{ name: 'Legal' }"
         class="secondary py-2 px-4"
       >
-        Legal
+        {{ $t("theFooter.legal.legal") }}
       </router-link>
       <router-link
         :to="{ name: 'PrivacyPolicy' }"
         class="secondary py-2 px-4"
       >
-        Privacy policy
+        {{ $t("theFooter.legal.privacyPolicy") }}
       </router-link>
     </div>
   </div>
