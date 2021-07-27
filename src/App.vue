@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen">
+  <div class="flex flex-col h-screen max-w-screen-md mx-auto">
     <TheHeader />
     <router-view class="mb-auto px-5"/>
     <TheFooter />
@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import TheHeader from '@/components/base/TheHeader.vue';
-import TheFooter from '@/components/base/TheFooter.vue';
+import TheHeader from '@/components/core/TheHeader.vue';
+import TheFooter from '@/components/core/TheFooter.vue';
 
 export default defineComponent({
   name: 'App',

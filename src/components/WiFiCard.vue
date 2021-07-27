@@ -1,46 +1,39 @@
 <template>
-  <div>
-    <h2>{{ $t("wifiCard.title") }}</h2>
+  <div class="my-7 p-5 shadow-md border rounded-md">
+    <h2 class="pb-3">{{ $t("wifiCard.title") }}</h2>
 
     <div class="flex flex-row">
       <QrcodeVue :value="qrValue" />
-      <div>
-        <label for="wifi-ssid">{{ $t("wifiCard.networkName") }}</label>
-        <input
-          id="wifi-ssid"
-          name="wifi-ssid"
-          :placeholder='$t("wifiCard.networkName")'
+      <div class="flex flex-col ml-10">
+        <v-input
           v-model="wifiSSID"
+          id="wifi-ssid"
+          :label='$t("wifiCard.networkName")'
+          :placeholder='$t("wifiCard.networkName")'
         />
-
-        <label for="wifi-password">{{ $t("wifiCard.password") }}</label>
-        <input
-          id="wifi-password"
-          name="wifi-password"
-          :placeholder='$t("wifiCard.password")'
+        
+        <v-input
+          v-show="wifiEncryptionMode !== 'nopass' "
           v-model="wifiPassword"
+          id="wifi-password"
+          :label='$t("wifiCard.password")'
+          :placeholder='$t("wifiCard.password")'
         />
 
+        <v-radio
+          v-model="wifiEncryptionMode"
+          :options="wifiEncryptionList"
+          :label='$t("wifiCard.encryptionMode")'
+          row
+        />
 
-        <div class="wifi-encryption-mode">
-          <label>{{ $t("wifiCard.encryptionMode") }}</label>
-          <span
-            v-for="encryption in wifiEncryptionList"
-            :key="encryption.id"
-          >
-            <input
-              type="radio"
-              :id="encryption.id"
-              :value="encryption.value"
-              v-model="wifiEncryptionMode"
-            />
-            <label :for="encryption.id">{{ encryption.label }}</label>
-          </span>
+        <div>
+          <input type="checkbox" class="mr-1" id="wifi-hidden" v-model="wifiHidden" />
+          <label for="wifi-hidden">{{ $t("wifiCard.hiddenNetwork") }}</label>
         </div>
       </div>
 
-      <input type="checkbox" id="wifi-hidden" v-model="wifiHidden" />
-      <label for="wifi-hidden">{{ $t("wifiCard.hiddenNetwork") }}</label>
+      
     </div>
 
   </div>
@@ -50,12 +43,16 @@
 import { computed, defineComponent, ref } from 'vue';
 import QrcodeVue from 'qrcode.vue';
 import { useI18n } from 'vue-i18n';
+import vInput from '@/components/base/v-Input.vue';
+import vRadio from '@/components/base/v-Radio.vue';
 
 
 export default defineComponent({
   name: 'WiFiCard',
   components: {
     QrcodeVue,
+    vInput,
+    vRadio,
   },
   props: {
     //
@@ -69,18 +66,18 @@ export default defineComponent({
     const wifiHidden = ref(false);
     const wifiEncryptionList = computed(() => [
       {
-        id: 'wifi-encryption-mode--none',
+        key: 'wifi-encryption-mode--none',
         value: 'nopass',
         // label: 'none',
         label: t('wifiCard.encryption.none'),
       },
       {
-        id: 'wifi-encryption-mode--wpa',
+        key: 'wifi-encryption-mode--wpa',
         value: 'WPA',
         label: 'WPA/WPA2/WPA3',
       },
       {
-        id: 'wifi-encryption-mode--wep',
+        key: 'wifi-encryption-mode--wep',
         value: 'WEP',
         label: 'WEP',
       },

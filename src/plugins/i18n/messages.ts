@@ -6,9 +6,9 @@ const messages = {
   en: {
     wifiCard: {
       title: 'WiFi Login',
-      networkName: 'Your WiFi Network',
-      password: 'password',
-      encryptionMode: 'encryption',
+      networkName: 'WiFi Network',
+      password: 'Password',
+      encryptionMode: 'Encryption',
       encryption: {
         none: 'none',
         wpa: 'WPA/WPA2/WPA3',
