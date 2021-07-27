@@ -27,6 +27,9 @@ const messages = {
         privacyPolicy: 'Privacy policy',
       },
     },
+    theHeader: {
+      selectLanguage: 'Select language',
+    },
     pages: {
       home: {
         title: '📡 📶 Share Wifi - The cool way 🚀',
@@ -62,7 +65,7 @@ const messages = {
       encryption: {
         none: 'keine',
       },
-      description: '📱📷 Scanne den QR-Code mit deiner Handykamera um dich automatisch mit dem WLAN zu verbinden',
+      description: 'Scanne den QR-Code mit deiner Handykamera um dich automatisch mit dem WLAN zu verbinden',
       hiddenNetwork: 'Verstecktes Netzwerk',
     },
   },
