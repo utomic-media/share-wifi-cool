@@ -1,8 +1,9 @@
 <template>
   <div>
-    
-    
+    <h1>{{ $t("pages.home.title") }}</h1>
+    <div>{{ $t("pages.home.description") }}</div>
     <WiFiCard />
+    <!-- TODO: render the FAQ toggles including links -->
 
   </div>
 </template>

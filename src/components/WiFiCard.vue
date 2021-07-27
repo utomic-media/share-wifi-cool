@@ -2,42 +2,46 @@
   <div>
     <h2>{{ $t("wifiCard.title") }}</h2>
 
-    <QrcodeVue :value="qrValue" />
-    <label for="wifi-ssid">{{ $t("wifiCard.networkName") }}</label>
-    <input
-      id="wifi-ssid"
-      name="wifi-ssid"
-      :placeholder='$t("wifiCard.networkName")'
-      v-model="wifiSSID"
-    />
-
-    <label for="wifi-password">{{ $t("wifiCard.password") }}</label>
-    <input
-      id="wifi-password"
-      name="wifi-password"
-      :placeholder='$t("wifiCard.password")'
-      v-model="wifiPassword"
-    />
-
-
-    <div class="wifi-encryption-mode">
-      <label>{{ $t("wifiCard.encryptionMode") }}</label>
-      <span
-        v-for="encryption in wifiEncryptionList"
-        :key="encryption.id"
-      >
+    <div class="flex flex-row">
+      <QrcodeVue :value="qrValue" />
+      <div>
+        <label for="wifi-ssid">{{ $t("wifiCard.networkName") }}</label>
         <input
-          type="radio"
-          :id="encryption.id"
-          :value="encryption.value"
-          v-model="wifiEncryptionMode"
+          id="wifi-ssid"
+          name="wifi-ssid"
+          :placeholder='$t("wifiCard.networkName")'
+          v-model="wifiSSID"
         />
-        <label :for="encryption.id">{{ encryption.label }}</label>
-      </span>
-    </div>
 
-    <input type="checkbox" id="wifi-hidden" v-model="wifiHidden" />
-    <label for="wifi-hidden">{{ $t("wifiCard.hiddenNetwork") }}</label>
+        <label for="wifi-password">{{ $t("wifiCard.password") }}</label>
+        <input
+          id="wifi-password"
+          name="wifi-password"
+          :placeholder='$t("wifiCard.password")'
+          v-model="wifiPassword"
+        />
+
+
+        <div class="wifi-encryption-mode">
+          <label>{{ $t("wifiCard.encryptionMode") }}</label>
+          <span
+            v-for="encryption in wifiEncryptionList"
+            :key="encryption.id"
+          >
+            <input
+              type="radio"
+              :id="encryption.id"
+              :value="encryption.value"
+              v-model="wifiEncryptionMode"
+            />
+            <label :for="encryption.id">{{ encryption.label }}</label>
+          </span>
+        </div>
+      </div>
+
+      <input type="checkbox" id="wifi-hidden" v-model="wifiHidden" />
+      <label for="wifi-hidden">{{ $t("wifiCard.hiddenNetwork") }}</label>
+    </div>
 
   </div>
 </template>

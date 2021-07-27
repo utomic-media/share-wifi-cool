@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="px-5">
     <span>
       Developed and designed by
       <a href="utomic.media" target="blank" rel="noopener">Utomic Media</a>
