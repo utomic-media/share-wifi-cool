@@ -40,9 +40,8 @@ const messages = {
           {
             key: 'It is secure to use?',
             value: 'Yes. this application does not stores any sensitive Data. You can even hava a look into the sourcecode on Github',
-            // TODO: add the link somehow that it doesn't resolves in a type erroe (optional params)
-            // link: 'https://github.com/utomic-media/share-wifi-cool',
-            // linkText: 'Visit the Github Repository',
+            link: 'https://github.com/utomic-media/share-wifi-cool',
+            linkText: 'Visit the Github Repository',
           },
         ],
       },
