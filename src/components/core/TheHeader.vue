@@ -1,6 +1,6 @@
 <template>
   <nav class="flex flex-wrap flex-row justify-end px-5 my-3">
-    <LocaleSelection class="py-2 px-4" />
+    <LocaleSelection />
     <a href="https://github.com/utomic-media/share-wifi-cool" class="py-2 px-4 ">
       View on Github
     </a>
