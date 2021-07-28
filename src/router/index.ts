@@ -6,6 +6,4 @@ const router = createRouter({
   routes, // short for `routes: routes`
 });
 
-// TODO: #3 IMPORTANT: add Language routes
-
 export default router;
