@@ -53,3 +53,4 @@ jobs:
           username: ${{ secrets.FTP_DEPLOY_FTP_USER }}
           password: ${{ secrets.FTP_DEPLOY_FTP_PASSWORD }}
           protocol: ftps
+          local-dir: ./dist/
