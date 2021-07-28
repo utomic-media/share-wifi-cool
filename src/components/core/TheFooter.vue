@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row py-3 px-5 justify-between">
+  <div class="flex flex-row py-5 px-5 justify-between">
     <div>
       {{ $t("theFooter.text") }}
       <a href="utomic.media" target="blank" rel="noopener" >Utomic Media</a>

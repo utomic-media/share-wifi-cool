@@ -1,5 +1,5 @@
 <template>
-  <div class="v-accordion">
+  <div class="v-accordion mb-7">
     <template
       v-for="(object, index) in content"
       :key="index"
