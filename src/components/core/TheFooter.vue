@@ -30,9 +30,9 @@ export default defineComponent({
   components: {
     //
   },
-  props: {
+  // props: {
     //
-  },
+  // },
   setup() {
     //
   },

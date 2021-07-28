@@ -6,7 +6,7 @@ module.exports = {
   },
   extends: [
     'plugin:vue/vue3-essential',
-    '@vue/airbnb',
+    '@vue/airbnb', // TODO: #5 Add the airbnb-eslint config itself (@vue/airbnb is not really optimized for vite)
     '@vue/typescript/recommended',
   ],
   parserOptions: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="locale-changer">
+  <div class="locale-changer py-2 px-4">
     <label for="language-selection" class="text-gray-700 mr-1">
       {{ $t('theHeader.selectLanguage') }}:
     </label>
@@ -28,9 +28,9 @@ export default defineComponent({
   components: {
     //
   },
-  props: {
+  // props: {
     //
-  },
+  // },
   setup() {
     //
   },

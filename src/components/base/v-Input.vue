@@ -49,7 +49,7 @@ export default defineComponent({
   setup(props, { emit }) {
     const showLabel = computed(() => props.modelValue !== '');
 
-    const updateInput = (event: InputEvent) => {
+    const updateInput = (event: Event) => {
       emit('update:modelValue', (event.target as HTMLInputElement).value);
     };
 
