@@ -8,18 +8,18 @@
     <div class="flex v-radio-options" :class="[row ? 'flex-row' : 'flex-col']">
       <template
         v-for="option in options"
-        :key="option.key"
+        :key="option.id"
       >
         <div :class="[option.value === modelValue ? 'selected' : '']">
           <input
             type="radio"
             class="mr-1"
-            :id="option.key"
+            :id="option.id"
             :value="option.value"
             :checked="option.value === modelValue"
             @change="updateSelection"
           />
-          <label :for="option.key" class="mr-3 text-gray-700">{{ option.label }}</label>
+          <label :for="option.id" class="mr-3 text-gray-700">{{ option.label }}</label>
         </div>
       </template>
     </div>
@@ -30,7 +30,7 @@
 import { computed, defineComponent, PropType } from 'vue';
 
 interface SelectOption {
-  key: string | number,
+  id: string,
   value: string | number,
   label: string | number,
 }
@@ -62,7 +62,7 @@ export default defineComponent({
   setup(props, { emit }) {
     const showLabel = computed(() => props.modelValue !== '');
 
-    const updateSelection = (event: InputEvent) => {
+    const updateSelection = (event: Event) => {
       emit('update:modelValue', (event.target as HTMLInputElement).value);
     };
 

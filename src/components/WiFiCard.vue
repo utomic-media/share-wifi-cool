@@ -97,18 +97,18 @@ export default defineComponent({
     const wifiHidden = ref(false);
     const wifiEncryptionList = computed(() => [
       {
-        key: 'wifi-encryption-mode--none',
+        id: 'wifi-encryption-mode--none',
         value: 'nopass',
         // label: 'none',
         label: t('wifiCard.encryption.none'),
       },
       {
-        key: 'wifi-encryption-mode--wpa',
+        id: 'wifi-encryption-mode--wpa',
         value: 'WPA',
         label: 'WPA/WPA2/WPA3',
       },
       {
-        key: 'wifi-encryption-mode--wep',
+        id: 'wifi-encryption-mode--wep',
         value: 'WEP',
         label: 'WEP',
       },
