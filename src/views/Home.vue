@@ -5,22 +5,28 @@
     <WiFiCard />
     
     <h2 class="mt-12">FAQ</h2>
-    <!-- TODO: #2 look for a nicer way to iterate through the faq -->
-    <div v-if="$i18n.messages[$i18n.locale].pages?.home?.faq">
-      <v-accordion :content='$i18n.messages[$i18n.locale].pages.home.faq' />
-    </div>
-    <div v-else>
-      <v-accordion :content='$i18n.messages[$i18n.fallbackLocale].pages.home.faq' />
-    </div>
+    <v-accordion :content="faq" />
     
 
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { computed, defineComponent } from 'vue';
 import WiFiCard from '@/components/WiFiCard.vue';
 import vAccordion from '@/components/base/v-Accodion.vue';
+import { useI18n } from 'vue-i18n';
+
+interface Link {
+  target: string,
+  text: string,
+}
+
+interface FAQ {
+  key: string,
+  value: string,
+  link?: Link,
+}
 
 export default defineComponent({
   name: 'Home',
@@ -32,7 +38,36 @@ export default defineComponent({
     //
   // },
   setup() {
-    //
+    const { t } = useI18n();
+
+    const faq = computed(() => {
+      const faqKeys = ['supportedPhones', 'storedData', 'security', 'errorFound', 'translationEdit' ];
+      let constructedFAQs:  Array<FAQ>= [];
+
+      faqKeys.forEach(element => {
+        let currentFAQ: FAQ = {
+          key: t(`pages.home.faq.${element}.key`),
+          value: t(`pages.home.faq.${element}.value`),
+        };
+
+        // also add a link property if exists
+        if (
+          t(`pages.home.faq.${element}.link.target`, [], '0') !== '0'
+          && t(`pages.home.faq.${element}.link.text`, [], '0') !== '0'
+        ) {
+          currentFAQ.link = {
+            target: t(`pages.home.faq.${element}.link.target`),
+            text: t(`pages.home.faq.${element}.link.text`),
+          };
+        }
+        constructedFAQs.push(currentFAQ);
+      });
+      
+      return constructedFAQs;
+    });
+
+
+    return { faq, };
   },
 });
 </script>
