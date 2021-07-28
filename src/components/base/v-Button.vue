@@ -9,11 +9,7 @@
       :target="component === 'a' ? '_blank' : null"
       @click.stop="onClick"
       class="py-2 inline-block"
-      :class="[
-        textStyle
-          ? 'hover:text-green-700 hover:bg-gray-50 rounded-md border border-current px-3'
-          : 'rounded-md bg-green-500 text-white hover:bg-green-700 hover:text-gray-50 px-3'
-      ]"
+      :class="styleClasses"
     >
       <slot />
     </component>
@@ -57,12 +53,33 @@ export default defineComponent({
     });
 
     const href = computed(() => props.to || props.hrefLink);
+    
+
+    const styleClasses = computed(() => {
+      const defaultStyles = 'px-3 border border-current rounded-md';
+      const defaultStyleDisabled = 'cursor-not-allowed';
+      const primaryStyle = 'bg-green-500 text-white hover:bg-green-700 hover:text-gray-50';
+      const primarySytleDisabled = 'bg-gray-500 text-white hover:bg-gray-400 hover:text-gray-50';
+      const textStyle = 'hover:text-green-700 hover:bg-gray-50';
+      const textStyleDisabled = 'bg-gray-100 text-gray-500 hover:text-gray-300 hover:bg-gray-50';
+
+      if (props.textStyle && props.disabled) {
+        return `${defaultStyles} ${textStyleDisabled} ${defaultStyleDisabled}`;
+      } else if (props.textStyle && !props.disabled) {
+        return `${defaultStyles} ${textStyle}`;
+      } else if (props.disabled) {
+        return `${defaultStyles} ${primarySytleDisabled} ${defaultStyleDisabled}`;
+      }
+      return `${defaultStyles} ${primaryStyle}`;
+    });
 
     const onClick = (event: MouseEvent) => {
       emit('click', event);
     };
 
-    return { component, onClick, href };
+    return {
+      component, onClick, href, styleClasses,
+    };
   },
 
 });

@@ -44,13 +44,25 @@
       <p class="mt-1">
         <span class="mr-1">📱 📷 </span>
         {{ $t("wifiCard.description") }}
-        </p>
+      </p>
 
     </div>
 
-    <v-button @click="printWiFiCard">
-      {{ $t("pages.home.printButton") }}
-    </v-button>
+    <div class="flex flex-row">
+
+      <div class="flex flex-col">
+        <v-button disabled textStyle class="mr-3">
+          {{ $t("wifiCard.downloadImageButton") }}
+        </v-button>
+        <div class="text-sm text-gray-500 italic">
+          {{ $t("wifiCard.comingSoon") }}!
+        </div>
+      </div>
+
+      <v-button @click="printWiFiCard">
+        {{ $t("wifiCard.printButton") }}
+      </v-button>
+    </div>
 
   </div>
 </template>

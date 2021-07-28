@@ -19,6 +19,9 @@ const messages = {
       errors: {
         passwordTooShort: 'Password to short. A {type} password needs to have at least {number} characters',
       },
+      printButton: 'Print WiFI Card',
+      downloadImageButton: 'Download WiFi Card as Image',
+      comingSoon: 'Coming soon',
     },
     theFooter: {
       text: 'Developed and designed with 💚 by',
@@ -34,7 +37,6 @@ const messages = {
       home: {
         title: '📡 📶 Share Wifi - The cool way 🚀',
         description: 'Share your WiFi at home with your friends the cool way. No more searching for the passwords. Now you can easily create a qr code that allows everyone to connect to your network. Just scan the qr code with your smartphone and it connects automatically to the network without typing a password(required Android 10 and iOS 11).',
-        printButton: 'Print WiFI Card',
         faq: [
           {
             key: 'Does it works with any phone?',

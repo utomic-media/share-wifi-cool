@@ -45,6 +45,7 @@ module.exports = {
     ],
     // TODO Unimportant: find a way to set variables to false, but allow variable funcitons in vue script
     "no-use-before-define": ["error", { "functions": false, "classes": true, "variables": false }],
+    "no-else-return": ["error", {"allowElseIf": true}],
   },
   overrides: [
     //
