@@ -51,6 +51,7 @@
     <div class="flex flex-row">
 
       <div class="flex flex-col">
+        <!-- TODO: #4 Add image generation -->
         <v-button disabled textStyle class="mr-3">
           {{ $t("wifiCard.downloadImageButton") }}
         </v-button>

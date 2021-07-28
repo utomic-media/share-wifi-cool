@@ -5,7 +5,7 @@
     <WiFiCard />
     
     <h2 class="mt-12">FAQ</h2>
-    <!-- TODO: look for a nicer way to iterate through the faq -->
+    <!-- TODO: #2 look for a nicer way to iterate through the faq -->
     <div v-if="$i18n.messages[$i18n.locale].pages?.home?.faq">
       <v-accordion :content='$i18n.messages[$i18n.locale].pages.home.faq' />
     </div>

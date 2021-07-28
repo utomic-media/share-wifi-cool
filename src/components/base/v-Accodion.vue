@@ -17,7 +17,7 @@
           {{ object.key }}
         </h3>
 
-        <!-- TODO: create opening transition -->
+        <!-- TODO: #1 create opening transition -->
         <div
           v-show="index === active"
           class="p-3 text-sm"
