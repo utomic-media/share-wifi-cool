@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import LocaleSelection from '@/components/LocaleSelection/Index.vue';
+import LocaleSelection from '@/components/LocaleSelection.vue';
 
 export default defineComponent({
   name: 'TheHeader',
