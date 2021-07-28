@@ -41,11 +41,11 @@ export default defineComponent({
     const { t } = useI18n();
 
     const faq = computed(() => {
-      const faqKeys = ['supportedPhones', 'storedData', 'security', 'errorFound', 'translationEdit' ];
-      let constructedFAQs:  Array<FAQ>= [];
+      const faqKeys = ['supportedPhones', 'storedData', 'security', 'errorFound', 'translationEdit'];
+      const constructedFAQs: Array<FAQ> = [];
 
-      faqKeys.forEach(element => {
-        let currentFAQ: FAQ = {
+      faqKeys.forEach((element) => {
+        const currentFAQ: FAQ = {
           key: t(`pages.home.faq.${element}.key`),
           value: t(`pages.home.faq.${element}.value`),
         };
@@ -66,8 +66,7 @@ export default defineComponent({
       return constructedFAQs;
     });
 
-
-    return { faq, };
+    return { faq };
   },
 });
 </script>
