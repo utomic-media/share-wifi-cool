@@ -32,6 +32,7 @@ const messages = {
     },
     theHeader: {
       selectLanguage: 'Select language',
+      viewOnGithub: 'View on Github',
     },
     pages: {
       home: {
