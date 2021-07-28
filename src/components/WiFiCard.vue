@@ -85,9 +85,9 @@ export default defineComponent({
     vRadio,
     vButton,
   },
-  props: {
+  // props: {
     //
-  },
+  // },
   setup() {
     const { t } = useI18n();
 

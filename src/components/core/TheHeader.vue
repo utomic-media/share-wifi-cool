@@ -16,9 +16,9 @@ export default defineComponent({
   components: {
     LocaleSelection,
   },
-  props: {
+  // props: {
     //
-  },
+  // },
   setup() {
     //
   },

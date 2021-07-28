@@ -28,9 +28,9 @@ export default defineComponent({
     WiFiCard,
     vAccordion,
   },
-  props: {
+  // props: {
     //
-  },
+  // },
   setup() {
     //
   },
