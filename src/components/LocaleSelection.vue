@@ -1,6 +1,6 @@
 <template>
   <div class="locale-changer py-2 px-4">
-    <label for="language-selection" class="text-gray-700 mr-1">
+    <label for="language-selection" class="text-gray-700 mr-1 hidden sm:inline">
       {{ $t('theHeader.selectLanguage') }}:
     </label>
     <select

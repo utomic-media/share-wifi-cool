@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ $t("pages.home.title") }}</h1>
-    <p>{{ $t("pages.home.description") }}</p>
+    <p class="my-3 sm:my-5">{{ $t("pages.home.description") }}</p>
     <WiFiCard />
     
     <h2 class="mt-12">FAQ</h2>
