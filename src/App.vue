@@ -3,6 +3,7 @@
     <TheHeader />
     <router-view class="mb-auto px-5"/>
     <TheFooter />
+    <TheAnalytics />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import { defineComponent } from 'vue';
 import TheHeader from '@/components/core/TheHeader.vue';
 import TheFooter from '@/components/core/TheFooter.vue';
+import TheAnalytics from '@/components/core/TheAnalytics.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     TheHeader,
     TheFooter,
+    TheAnalytics,
   },
 });
 </script>

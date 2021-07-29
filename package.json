@@ -11,7 +11,6 @@
     "qrcode.vue": "^3.2.2",
     "vue": "^3.0.5",
     "vue-i18n": "^9.1.7",
-    "vue-matomo": "^4.1.0",
     "vue-router": "^4.0.10"
   },
   "devDependencies": {

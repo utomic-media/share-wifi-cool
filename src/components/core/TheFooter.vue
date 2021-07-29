@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row py-5 px-5 justify-between">
+  <div class="flex sm:flex-row flex-col py-5 px-5 justify-between">
     <div>
       {{ $t("theFooter.text") }}
       <a href="utomic.media" target="blank" rel="noopener" >Utomic Media</a>
@@ -8,7 +8,7 @@
     <div>
       <router-link
         :to="{ name: 'Legal' }"
-        class="secondary py-2 px-4"
+        class="secondary py-2  sm:px-4 pr-4"
       >
         {{ $t("theFooter.legal.legal") }}
       </router-link>
