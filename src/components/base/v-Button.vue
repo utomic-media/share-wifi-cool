@@ -42,6 +42,9 @@ export default defineComponent({
     download: {
       type: Boolean,
     },
+    fullWidth: {
+      type: Boolean,
+    },
   },
 
   setup(props, { emit }) {
@@ -63,14 +66,24 @@ export default defineComponent({
       const textStyle = 'hover:text-green-700 hover:bg-gray-50';
       const textStyleDisabled = 'bg-gray-100 text-gray-500 hover:text-gray-300 hover:bg-gray-50';
 
+      let currentClasses = defaultStyles;
+
+      // Disabled and text style
       if (props.textStyle && props.disabled) {
-        return `${defaultStyles} ${textStyleDisabled} ${defaultStyleDisabled}`;
+        currentClasses += ` ${textStyleDisabled} ${defaultStyleDisabled}`;
       } else if (props.textStyle && !props.disabled) {
-        return `${defaultStyles} ${textStyle}`;
+        currentClasses += ` ${textStyle}`;
       } else if (props.disabled) {
-        return `${defaultStyles} ${primarySytleDisabled} ${defaultStyleDisabled}`;
+        currentClasses += ` ${primarySytleDisabled} ${defaultStyleDisabled}`;
+      } else {
+        currentClasses += ` ${primaryStyle}`;
       }
-      return `${defaultStyles} ${primaryStyle}`;
+
+      // full width
+      if (props.fullWidth) {
+        currentClasses += ' w-full';
+      }
+      return currentClasses;
     });
 
     const onClick = (event: MouseEvent) => {
