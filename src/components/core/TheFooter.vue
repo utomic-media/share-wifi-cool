@@ -2,7 +2,7 @@
   <div class="flex sm:flex-row flex-col py-5 px-5 justify-between">
     <div>
       {{ $t("theFooter.text") }}
-      <a href="utomic.media" target="blank" rel="noopener" >Utomic Media</a>
+      <a href="https://utomic.media" target="blank" rel="noopener" >Utomic Media</a>
     </div>
     
     <div>
