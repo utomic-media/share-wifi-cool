@@ -1,8 +1,14 @@
 <template>
   <div
     v-if="showBanner"
-    class="flex sm:flex-row flex-col fixed bottom-0 bg-gray-300 m-3 p-7 rounded-md">
+    class="flex sm:flex-row flex-col fixed bottom-0 bg-gray-200 m-3 p-7 rounded-md">
     <div class="mb-1">
+      <h3 class="text-lg mb-1">
+        <span class="text-5xl">
+          🍪
+        </span>
+        {{ $t('theAnalytics.title') }}
+      </h3>
       {{ $t('theAnalytics.message') }}
       <router-link :to="{ name: 'PrivacyPolicy' }" class="secondary">
         {{ $t("theFooter.legal.legal") }}

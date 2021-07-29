@@ -1,7 +1,12 @@
 <template>
   <nav class="flex flex-wrap flex-row justify-end px-5 my-3">
     <LocaleSelection />
-    <a href="https://github.com/utomic-media/share-wifi-cool" class="py-2 px-4 ">
+    <a
+      href="https://github.com/utomic-media/share-wifi-cool"
+      target="blank"
+      rel="noopener"
+      class="py-2 px-4 "
+    >
       {{ $t('theHeader.viewOnGithub') }}
     </a>
   </nav>

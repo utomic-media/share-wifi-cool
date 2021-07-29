@@ -35,6 +35,7 @@ const messages = {
       viewOnGithub: 'View on Github',
     },
     theAnalytics: {
+      title: '... you know',
       message: "We use cookies to analyse the way how people use this website. We'll never share any informations and do not collect any WiFi related data. The data are stored anonymized on european servers. You can find more informations on our data privacy site.",
       accept: 'Accept',
       decline: 'Decline',
