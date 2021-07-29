@@ -1,7 +1,9 @@
 <template>
   <div class="flex flex-col h-screen max-w-screen-md mx-auto">
     <TheHeader />
-    <router-view class="mb-auto px-5"/>
+    <div class="mb-auto px-5">
+      <router-view/>
+    </div>
     <TheFooter />
     <TheAnalytics />
   </div>
