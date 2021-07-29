@@ -1,5 +1,12 @@
 /* eslint-disable no-underscore-dangle */
 
+declare global {
+    interface Window {
+        _paq: Array<unknown>;
+    }
+}
+
+
 /**
  * Matomo
  */
@@ -12,7 +19,7 @@ _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export function initAnalytics() {
+export function initAnalytics(): void {
   const u = '//analytics.utomic.media/';
   _paq.push(['setTrackerUrl', `${u}matomo.php`]);
   _paq.push(['setSiteId', '3']);

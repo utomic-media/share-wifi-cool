@@ -33,7 +33,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import vButton from '@/components/base/v-Button.vue';
-import { initAnalytics } from '@/plugins/matomo/index.js';
+import { initAnalytics } from '@/plugins/matomo/index';
 
 export default defineComponent({
   name: 'TheAnalytics',
@@ -44,7 +44,7 @@ export default defineComponent({
     //
   // },
   setup() {
-    const showBanner = ref(true);
+    const showBanner = ref(true); // TODO: check if cookie on load already exists
 
     const declineCookies = (() => {
       showBanner.value = false;
