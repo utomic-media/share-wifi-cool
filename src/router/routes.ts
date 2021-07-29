@@ -1,7 +1,7 @@
 import { RouteRecordRaw } from 'vue-router';
 import Home from '@/views/Home.vue';
-import Legal from '@/views/Legal.vue';
-import PrivacyPolicy from '@/views/PrivacyPolicy.vue';
+import Legal from '@/views/Legal/Index.vue';
+import PrivacyPolicy from '@/views/PrivacyPolicy/Index.vue';
 
 
 const routes: Array<RouteRecordRaw> = [
