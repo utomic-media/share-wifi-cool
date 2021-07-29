@@ -18,9 +18,9 @@ export default defineComponent({
     LegalDe,
     LegalEn,
   },
-  props: {
+  // props: {
     //
-  },
+  // },
   setup() {
     //
   },
