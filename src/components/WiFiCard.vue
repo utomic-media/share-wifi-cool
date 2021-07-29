@@ -6,9 +6,9 @@
         {{ $t("wifiCard.title") }}
       </h2>
 
-      <div class="flex sm:flex-row flex-col">
+      <div class="flex sm:flex-row flex-col print:flex-row print:bg-red">
         <QrcodeVue :value="qrValue" :size="175" />
-        <div class="flex flex-col sm:ml-10 mt-7 sm:mt-0 flex-1">
+        <div class="flex flex-col sm:ml-10 mt-7 sm:mt-0 flex-1 print:mt-0 print:ml-10">
           <v-input
             v-model="wifiSSID"
             id="wifi-ssid"
