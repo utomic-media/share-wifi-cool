@@ -12,12 +12,7 @@ on:
 
 jobs:
   ci:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [18]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout 🛎
@@ -26,7 +21,8 @@ jobs:
       - name: Setup node env 🏗
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Cache node_modules 📦
         uses: actions/cache@v4
