@@ -43,7 +43,7 @@ jobs:
         run: npm run build
       
       - name: Deploy to netcup
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: sharewifi.cool
           username: ${{ secrets.FTP_DEPLOY_FTP_USER }}
