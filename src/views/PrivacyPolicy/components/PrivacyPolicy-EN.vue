@@ -72,8 +72,8 @@
   </p>
   <p>
     Our host(s) will only process your data to the extent necessary to fulfil its performance obligations and to follow
-    our instructions with respect to such data.<p>
-    
+    our instructions with respect to such data.
+  </p>
   <p>
     We are using the following host(s):
   </p>
