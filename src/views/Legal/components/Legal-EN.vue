@@ -1,10 +1,11 @@
 <template>
   <h1>Site Notice</h1>
 
-  <h2>Information pursuant to Sect. 5 German Telemedia Act (TMG)</h2>
-  <p>Dominic Marcelino<br />
-  Sperberstraße 14<br />
-  58285 Gevelsberg</p>
+  <p>
+    Dominic Marcelino<br />
+    Sperberstra&szlig;e 14<br />
+    58285 Gevelsberg
+  </p>
 
   <h2>Contact</h2>
   <p>Phone: +49 2332 5178900<br />
@@ -16,8 +17,8 @@
 
   <h2>Dispute resolution proceedings in front of a consumer arbitration board</h2>
   <p>
-    We are not willing or obliged to participate in dispute resolution proceedings
-    in front of a consumer arbitration board.
+    We are not willing or obliged to participate
+    in dispute resolution proceedings in front of a consumer arbitration board.
   </p>
 </template>
 
