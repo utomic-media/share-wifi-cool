@@ -42,11 +42,14 @@ jobs:
       - name: Generate static files 🔨
         run: npm run build
       
-      - name: Deploy to netcup
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: sharewifi.cool
-          username: ${{ secrets.FTP_DEPLOY_FTP_USER }}
-          password: ${{ secrets.FTP_DEPLOY_FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./dist/
+      # NOTE: Update whole workflow once we pick-up the project again
+      #        Then delete this action and replace with proper solution!
+      #
+      # - name: Deploy to netcup
+      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      #   with:
+      #     server: sharewifi.cool
+      #     username: ${{ secrets.FTP_DEPLOY_FTP_USER }}
+      #     password: ${{ secrets.FTP_DEPLOY_FTP_PASSWORD }}
+      #     protocol: ftps
+      #     local-dir: ./dist/
